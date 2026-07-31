@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MD Contábil & Consultoria — Excelência em serviços contábeis</title>
+<meta name="description" content="MD Contábil & Consultoria — excelência em serviços contábeis em Brasília e região. Setor contábil, fiscal, pessoal, cadastro e consultoria. Uma contabilidade que resolve.">
+<meta property="og:title" content="MD Contábil & Consultoria — Uma contabilidade que resolve">
+<meta property="og:description" content="Excelência em serviços contábeis em Brasília e região. Fale conosco pelo WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230C2B2A'/%3E%3Ctext x='50' y='67' font-family='Georgia,serif' font-size='46' font-weight='600' text-anchor='middle' fill='%23E4C078'%3EMD%3C/text%3E%3C/svg%3E">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  img { max-width: 100%; }
+  :root {
+    --paper: #F4F5F2;
+    --surface: #FFFFFF;
+    --surface-2: #ECEEE9;
+    --ground: #0C2B2A;
+    --ground-2: #0F3634;
+    --primary: #114E4A;
+    --accent: #C6902F;
+    --accent-soft: #E4C078;
+    --ink: #14211F;
+    --muted: #55635E;
+    --line: #DBDED7;
+    --line-strong: #C6CBC2;
+    --on-ground: #EAF0EC;
+    --on-ground-muted: #9DB3AC;
+
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    --maxw: 1180px;
+    --gutter: clamp(20px, 5vw, 64px);
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(20,33,31,.06), 0 18px 40px -24px rgba(20,33,31,.28);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #091716;
+      --surface: #0E2221;
+      --surface-2: #112826;
+      --ground: #071211;
+      --ground-2: #0D201E;
+      --primary: #2E837A;
+      --accent: #D9A63F;
+      --accent-soft: #EAC886;
+      --ink: #E7EEE9;
+      --muted: #93A49E;
+      --line: #1C332F;
+      --line-strong: #274642;
+      --on-ground: #E7EEE9;
+      --on-ground-muted: #8CA39C;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 20px 46px -26px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="light"] {
+    --paper: #F4F5F2; --surface: #FFFFFF; --surface-2: #ECEEE9;
+    --ground: #0C2B2A; --ground-2: #0F3634; --primary: #114E4A;
+    --accent: #C6902F; --accent-soft: #E4C078; --ink: #14211F;
+    --muted: #55635E; --line: #DBDED7; --line-strong: #C6CBC2;
+    --on-ground: #EAF0EC; --on-ground-muted: #9DB3AC;
+    --shadow: 0 1px 2px rgba(20,33,31,.06), 0 18px 40px -24px rgba(20,33,31,.28);
+  }
+  :root[data-theme="dark"] {
+    --paper: #091716; --surface: #0E2221; --surface-2: #112826;
+    --ground: #071211; --ground-2: #0D201E; --primary: #2E837A;
+    --accent: #D9A63F; --accent-soft: #EAC886; --ink: #E7EEE9;
+    --muted: #93A49E; --line: #1C332F; --line-strong: #274642;
+    --on-ground: #E7EEE9; --on-ground-muted: #8CA39C;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 20px 46px -26px rgba(0,0,0,.7);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.08; text-wrap: balance; margin: 0; letter-spacing: -.01em; }
+  p { margin: 0; }
+  a { color: inherit; }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: var(--gutter); }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: .74rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--accent);
+    display: inline-flex; align-items: center; gap: .6em;
+  }
+  .eyebrow::before { content: ""; width: 26px; height: 1px; background: currentColor; opacity: .8; }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--paper) 86%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+  .monogram {
+    width: 42px; height: 42px; border-radius: 10px; flex: none;
+    display: grid; place-items: center;
+    background: var(--ground); color: var(--on-ground);
+    font-family: var(--serif); font-weight: 600; font-size: 1.12rem; letter-spacing: .02em;
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 45%, transparent);
+    position: relative;
+  }
+  .monogram::after {
+    content: ""; position: absolute; inset: 4px; border-radius: 7px;
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+  .brand-name { display: flex; flex-direction: column; line-height: 1.1; }
+  .brand-name strong { font-family: var(--serif); font-weight: 600; font-size: 1.02rem; letter-spacing: .01em; }
+  .brand-name span { font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+  .nav-links { display: flex; align-items: center; gap: 30px; }
+  .nav-links a { text-decoration: none; font-size: .92rem; color: var(--muted); transition: color .2s; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-actions { display: flex; align-items: center; gap: 8px; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: .55em;
+    font-family: var(--sans); font-size: .92rem; font-weight: 600;
+    padding: .72em 1.25em; border-radius: 999px;
+    text-decoration: none; cursor: pointer; border: 1px solid transparent;
+    transition: transform .16s ease, box-shadow .2s ease, background .2s, color .2s, border-color .2s;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--accent); color: #1c1405; box-shadow: 0 10px 24px -12px color-mix(in srgb, var(--accent) 80%, transparent); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -14px color-mix(in srgb, var(--accent) 85%, transparent); }
+  .btn-ghost { border-color: var(--line-strong); color: var(--ink); background: transparent; }
+  .btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
+  .btn-light { background: var(--on-ground); color: var(--ground); }
+  .btn-light:hover { transform: translateY(-2px); }
+  .btn svg { width: 17px; height: 17px; }
+
+  .theme-toggle {
+    width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line-strong);
+    background: transparent; color: var(--muted); cursor: pointer; display: grid; place-items: center;
+    transition: color .2s, border-color .2s;
+  }
+  .theme-toggle:hover { color: var(--ink); border-color: var(--primary); }
+  .theme-toggle svg { width: 18px; height: 18px; }
+  .theme-toggle .moon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .moon,
+  :root:not([data-theme="light"]) .theme-toggle .moon { display: none; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .theme-toggle .sun { display: none; } :root:not([data-theme="light"]) .theme-toggle .moon { display: block; } }
+  :root[data-theme="dark"] .theme-toggle .sun { display: none; }
+  :root[data-theme="dark"] .theme-toggle .moon { display: block; }
+  :root[data-theme="light"] .theme-toggle .sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .moon { display: none; }
+
+  /* ---------- Hero ---------- */
+  .hero { position: relative; background: var(--ground); color: var(--on-ground); overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(120% 80% at 82% -10%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 55%),
+      radial-gradient(90% 70% at 10% 110%, color-mix(in srgb, var(--primary) 55%, transparent), transparent 60%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: absolute; inset: 0; opacity: .5; pointer-events: none;
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--on-ground) 6%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--on-ground) 6%, transparent) 1px, transparent 1px);
+    background-size: 46px 46px;
+    -webkit-mask-image: radial-gradient(120% 90% at 70% 20%, #000 30%, transparent 75%);
+            mask-image: radial-gradient(120% 90% at 70% 20%, #000 30%, transparent 75%);
+  }
+  .hero-inner { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; padding-block: clamp(64px, 10vw, 118px); }
+  .hero-copy .eyebrow { color: var(--accent-soft); }
+  .hero h1 { font-size: clamp(2.7rem, 6.4vw, 4.6rem); margin: 22px 0 0; }
+  .hero h1 .accent { color: var(--accent-soft); font-style: italic; }
+  .hero-sub { margin-top: 22px; font-size: 1.14rem; color: var(--on-ground-muted); max-width: 46ch; }
+  .hero-cta { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero-trust { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 26px 34px; padding-top: 26px; border-top: 1px solid color-mix(in srgb, var(--on-ground) 14%, transparent); }
+  .hero-trust div { display: flex; flex-direction: column; }
+  .hero-trust b { font-family: var(--serif); font-size: 1.05rem; }
+  .hero-trust small { color: var(--on-ground-muted); font-size: .82rem; letter-spacing: .02em; }
+
+  /* Hero card — a stylized "balancete" */
+  .ledger {
+    position: relative; background: color-mix(in srgb, var(--on-ground) 5%, transparent);
+    border: 1px solid color-mix(in srgb, var(--on-ground) 14%, transparent);
+    border-radius: 18px; padding: 26px; backdrop-filter: blur(4px);
+    box-shadow: 0 30px 60px -30px rgba(0,0,0,.6);
+  }
+  .ledger-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+  .ledger-head span { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--on-ground-muted); }
+  .ledger-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent); }
+  .ledger-row { display: flex; align-items: center; justify-content: space-between; padding: 11px 0; border-bottom: 1px dashed color-mix(in srgb, var(--on-ground) 12%, transparent); font-variant-numeric: tabular-nums; }
+  .ledger-row:last-child { border-bottom: 0; }
+  .ledger-row .k { color: var(--on-ground-muted); font-size: .92rem; }
+  .ledger-row .v { font-family: var(--serif); font-size: 1.05rem; }
+  .ledger-row .v.up { color: var(--accent-soft); }
+  .ledger-bar { margin-top: 20px; height: 8px; border-radius: 6px; background: color-mix(in srgb, var(--on-ground) 12%, transparent); overflow: hidden; }
+  .ledger-bar i { display: block; height: 100%; width: 78%; border-radius: 6px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
+  .ledger-foot { margin-top: 12px; font-size: .8rem; color: var(--on-ground-muted); display: flex; justify-content: space-between; }
+
+  /* ---------- Section scaffolding ---------- */
+  section { position: relative; }
+  .band { padding-block: clamp(64px, 9vw, 108px); }
+  .sec-head { max-width: 640px; margin-bottom: 52px; }
+  .sec-head h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); margin-top: 16px; }
+  .sec-head p { margin-top: 16px; color: var(--muted); font-size: 1.08rem; }
+
+  /* ---------- Value / intro ---------- */
+  .intro { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+  .intro-lead { font-family: var(--serif); font-size: clamp(1.5rem, 2.8vw, 2.05rem); line-height: 1.28; }
+  .intro-lead em { color: var(--accent); font-style: italic; }
+  .intro-body { color: var(--muted); }
+  .intro-body p + p { margin-top: 18px; }
+  .pillars { display: grid; gap: 14px; margin-top: 28px; }
+  .pillar { display: flex; gap: 14px; align-items: flex-start; }
+  .pillar .tick { flex: none; width: 26px; height: 26px; border-radius: 8px; background: color-mix(in srgb, var(--accent) 16%, transparent); color: var(--accent); display: grid; place-items: center; margin-top: 2px; }
+  .pillar .tick svg { width: 15px; height: 15px; }
+  .pillar b { display: block; font-size: .98rem; }
+  .pillar span { color: var(--muted); font-size: .92rem; }
+
+  /* ---------- Services ---------- */
+  .services { background: var(--surface-2); }
+  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .svc {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 30px 26px; box-shadow: var(--shadow); position: relative; overflow: hidden;
+    transition: transform .2s ease, border-color .2s ease;
+  }
+  .svc::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--accent); transform: scaleY(0); transform-origin: top; transition: transform .28s ease; }
+  .svc:hover { transform: translateY(-4px); border-color: var(--line-strong); }
+  .svc:hover::before { transform: scaleY(1); }
+  .svc-ico { width: 46px; height: 46px; border-radius: 12px; background: color-mix(in srgb, var(--primary) 12%, transparent); color: var(--primary); display: grid; place-items: center; margin-bottom: 20px; }
+  .svc-ico svg { width: 24px; height: 24px; }
+  .svc h3 { font-size: 1.3rem; }
+  .svc p { margin-top: 10px; color: var(--muted); font-size: .96rem; }
+  .svc ul { margin: 16px 0 0; padding: 0; list-style: none; display: grid; gap: 7px; }
+  .svc li { font-size: .88rem; color: var(--muted); padding-left: 18px; position: relative; }
+  .svc li::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+  /* ---------- Differentiators band ---------- */
+  .diff { background: var(--ground); color: var(--on-ground); }
+  .diff .eyebrow { color: var(--accent-soft); }
+  .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 48px; margin-top: 46px; }
+  .diff-item { border-top: 1px solid color-mix(in srgb, var(--on-ground) 16%, transparent); padding-top: 20px; }
+  .diff-item .num { font-family: var(--serif); font-size: .9rem; color: var(--accent-soft); letter-spacing: .04em; }
+  .diff-item h3 { font-size: 1.28rem; margin-top: 10px; }
+  .diff-item p { margin-top: 10px; color: var(--on-ground-muted); font-size: .95rem; }
+
+  /* ---------- Partners ---------- */
+  .partners-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 30px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 9px; text-decoration: none;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+    padding: .6em 1.1em; font-size: .9rem; color: var(--ink); font-weight: 500;
+    transition: border-color .2s, transform .16s, color .2s;
+  }
+  .chip:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+  .chip .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+
+  /* ---------- Contact ---------- */
+  .contact-card {
+    display: grid; grid-template-columns: 1.05fr .95fr; gap: 0;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 22px; overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .contact-left { background: var(--ground); color: var(--on-ground); padding: clamp(34px, 5vw, 54px); position: relative; overflow: hidden; }
+  .contact-left::after { content: ""; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--accent) 34%, transparent), transparent 70%); }
+  .contact-left .eyebrow { color: var(--accent-soft); }
+  .contact-left h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); margin-top: 16px; position: relative; }
+  .contact-left p { margin-top: 16px; color: var(--on-ground-muted); position: relative; }
+  .contact-lines { margin-top: 30px; display: grid; gap: 4px; position: relative; }
+  .cline { display: flex; align-items: center; gap: 14px; padding: 13px 0; border-bottom: 1px solid color-mix(in srgb, var(--on-ground) 12%, transparent); text-decoration: none; color: var(--on-ground); transition: color .2s; }
+  .cline:hover { color: var(--accent-soft); }
+  .cline:last-child { border-bottom: 0; }
+  .cline .ci { flex: none; width: 38px; height: 38px; border-radius: 10px; background: color-mix(in srgb, var(--on-ground) 8%, transparent); display: grid; place-items: center; color: var(--accent-soft); }
+  .cline .ci svg { width: 18px; height: 18px; }
+  .cline small { display: block; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--on-ground-muted); }
+  .cline b { font-weight: 600; font-size: 1.02rem; letter-spacing: .01em; }
+  .socials { margin-top: 28px; display: flex; gap: 10px; position: relative; }
+  .socials a { width: 40px; height: 40px; border-radius: 10px; border: 1px solid color-mix(in srgb, var(--on-ground) 16%, transparent); display: grid; place-items: center; color: var(--on-ground); text-decoration: none; transition: background .2s, color .2s, transform .16s; }
+  .socials a:hover { background: var(--accent); color: #1c1405; transform: translateY(-2px); }
+  .socials svg { width: 18px; height: 18px; }
+
+  .contact-right { padding: clamp(34px, 5vw, 54px); display: flex; flex-direction: column; }
+  .contact-right h3 { font-size: 1.5rem; }
+  .contact-right > p { color: var(--muted); margin-top: 10px; font-size: .96rem; }
+  .field { display: flex; flex-direction: column; gap: 7px; margin-top: 18px; }
+  .field label { font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .field input, .field textarea {
+    font-family: var(--sans); font-size: .96rem; color: var(--ink);
+    background: var(--paper); border: 1px solid var(--line-strong); border-radius: 10px;
+    padding: .72em .9em; width: 100%; transition: border-color .2s, box-shadow .2s;
+  }
+  .field textarea { resize: vertical; min-height: 92px; }
+  .field input:focus, .field textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 18%, transparent); }
+  .contact-right .btn-primary { margin-top: 22px; justify-content: center; }
+  .form-note { margin-top: 14px; font-size: .8rem; color: var(--muted); text-align: center; }
+
+  /* ---------- Footer ---------- */
+  footer { background: var(--ground-2); color: var(--on-ground); padding-block: 54px 30px; margin-top: 0; }
+  .foot-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px; align-items: flex-start; }
+  .foot-brand { max-width: 340px; }
+  .foot-brand .brand-name strong { color: var(--on-ground); }
+  .foot-brand .brand-name span { color: var(--on-ground-muted); }
+  .foot-brand p { margin-top: 16px; color: var(--on-ground-muted); font-size: .92rem; }
+  .foot-cols { display: flex; gap: 60px; flex-wrap: wrap; }
+  .foot-col h4 { font-family: var(--sans); font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-soft); margin: 0 0 14px; }
+  .foot-col a, .foot-col p { display: block; text-decoration: none; color: var(--on-ground-muted); font-size: .92rem; margin-bottom: 9px; transition: color .2s; }
+  .foot-col a:hover { color: var(--on-ground); }
+  .foot-bar { margin-top: 40px; padding-top: 22px; border-top: 1px solid color-mix(in srgb, var(--on-ground) 14%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: var(--on-ground-muted); font-size: .82rem; }
+
+  /* WhatsApp float */
+  .wa-float {
+    position: fixed; right: 22px; bottom: 22px; z-index: 60;
+    width: 58px; height: 58px; border-radius: 50%; background: #25D366; color: #fff;
+    display: grid; place-items: center; text-decoration: none;
+    box-shadow: 0 12px 30px -8px rgba(37,211,102,.6); transition: transform .18s;
+  }
+  .wa-float:hover { transform: scale(1.07); }
+  .wa-float svg { width: 30px; height: 30px; }
+
+  /* Reveal animation */
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { scroll-behavior: auto !important; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .ledger { max-width: 460px; }
+    .intro { grid-template-columns: 1fr; }
+    .svc-grid { grid-template-columns: 1fr 1fr; }
+    .diff-grid { grid-template-columns: 1fr 1fr; }
+    .contact-card { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 620px) {
+    body { font-size: 16px; }
+    .svc-grid, .diff-grid { grid-template-columns: 1fr; }
+    .nav-actions .btn-label { display: none; }
+    .hero-trust { gap: 18px 26px; }
+  }
+</style>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="MD Contábil e Consultoria — início">
+      <span class="monogram" aria-hidden="true">MD</span>
+      <span class="brand-name">
+        <strong>MD Contábil</strong>
+        <span>&amp; Consultoria</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="#empresa">A empresa</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn-primary" href="https://wa.me/5561999197145" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 0 16 8 8 0 0 1-4-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-2.4 4c-.2 0-.5 0-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5 0 1.6-.6 1.9-1.3.2-.6.2-1.2.1-1.3l-.6-.3s-1.6-.8-1.9-.9c-.2 0-.4-.1-.6.2l-.8 1c-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.5-2-.2-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5l.1-.4c0-.2 0-.4-.1-.5l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.3z"/></svg>
+        <span class="btn-label">Falar no WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Excelência em serviços contábeis</span>
+        <h1>Uma contabilidade<br>que <span class="accent">resolve.</span></h1>
+        <p class="hero-sub">Você no controle do seu negócio, com o suporte de quem entende de contabilidade. Da abertura da empresa ao planejamento do dia a dia — organização, segurança e clareza para você crescer sem surpresas.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://wa.me/5561999197145" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 0 16 8 8 0 0 1-4-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-2.4 4c-.2 0-.5 0-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5 0 1.6-.6 1.9-1.3.2-.6.2-1.2.1-1.3l-.6-.3s-1.6-.8-1.9-.9c-.2 0-.4-.1-.6.2l-.8 1c-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.5-2-.2-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5l.1-.4c0-.2 0-.4-.1-.5l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.3z"/></svg>
+            Fale conosco agora
+          </a>
+          <a class="btn btn-ghost" href="#servicos" style="border-color: color-mix(in srgb, var(--on-ground) 30%, transparent); color: var(--on-ground);">Conheça os serviços</a>
+        </div>
+        <div class="hero-trust">
+          <div><b>Contabilidade completa</b><small>Contábil, fiscal, pessoal e cadastro</small></div>
+          <div><b>Atendimento próximo</b><small>Brasília &amp; região — DF</small></div>
+          <div><b>Resposta rápida</b><small>Suporte direto pelo WhatsApp</small></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="ledger" role="img" aria-label="Ilustração de um balancete organizado">
+          <div class="ledger-head">
+            <span>Resumo do mês</span>
+            <span class="ledger-dot" aria-hidden="true"></span>
+          </div>
+          <div class="ledger-row"><span class="k">Obrigações em dia</span><span class="v up">100%</span></div>
+          <div class="ledger-row"><span class="k">Folha de pagamento</span><span class="v">Processada</span></div>
+          <div class="ledger-row"><span class="k">Impostos apurados</span><span class="v">Em dia</span></div>
+          <div class="ledger-row"><span class="k">Balancete</span><span class="v">Fechado</span></div>
+          <div class="ledger-bar" aria-hidden="true"><i></i></div>
+          <div class="ledger-foot"><span>Situação da empresa</span><span>Saudável</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMPRESA / INTRO -->
+  <section class="band" id="empresa">
+    <div class="wrap intro">
+      <div class="reveal">
+        <span class="eyebrow">A empresa</span>
+        <p class="intro-lead" style="margin-top:18px;">Serviços contábeis são a base da <em>saúde financeira</em> de qualquer empresa — do MEI à sociedade de médio porte.</p>
+      </div>
+      <div class="intro-body reveal">
+        <p>Uma contabilidade qualificada evita problemas legais e financeiros no futuro e dá a você uma visão clara e organizada da situação econômica do seu negócio. É esse controle que colocamos nas suas mãos.</p>
+        <p>Na MD Contábil &amp; Consultoria, cada setor da sua empresa é acompanhado por quem realmente entende do assunto — com atendimento próximo, linguagem simples e prazos cumpridos.</p>
+        <div class="pillars">
+          <div class="pillar"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></span><span><b>Clareza total</b>Você entende cada número da sua empresa, sem juridiquês.</span></div>
+          <div class="pillar"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></span><span><b>Segurança fiscal</b>Obrigações em dia e riscos legais sob controle.</span></div>
+          <div class="pillar"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></span><span><b>Parceria de verdade</b>Um contador ao seu lado nas decisões do negócio.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="band services" id="servicos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Setores da contabilidade</span>
+        <h2>Tudo o que a sua empresa precisa, em um só lugar</h2>
+        <p>Estruturamos o atendimento por setores especializados, para que nenhuma obrigação — e nenhuma oportunidade — passe despercebida.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc reveal">
+          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg></div>
+          <h3>Setor Contábil</h3>
+          <p>A espinha dorsal do seu negócio, sempre organizada e atualizada.</p>
+          <ul><li>Escrituração contábil</li><li>Balancetes e balanços</li><li>Demonstrações financeiras</li></ul>
+        </article>
+        <article class="svc reveal">
+          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l1 3H8zM7 6h10v14a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"/><path d="M10 11h4M10 15h4"/></svg></div>
+          <h3>Setor Fiscal</h3>
+          <p>Impostos calculados corretamente e no prazo, sem sustos.</p>
+          <ul><li>Apuração de tributos</li><li>Obrigações acessórias</li><li>Emissão e conferência de notas</li></ul>
+        </article>
+        <article class="svc reveal">
+          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 4a3 3 0 0 1 0 6M21 20a5.5 5.5 0 0 0-4-5.3"/></svg></div>
+          <h3>Setor Pessoal &amp; RH</h3>
+          <p>Sua equipe em dia — da admissão à folha, tudo certo.</p>
+          <ul><li>Folha de pagamento</li><li>Admissões e rescisões</li><li>eSocial e encargos</li></ul>
+        </article>
+        <article class="svc reveal">
+          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 13h4M10 17h4"/></svg></div>
+          <h3>Setor de Cadastro</h3>
+          <p>Da abertura à baixa, sua empresa regular em todos os órgãos.</p>
+          <ul><li>Abertura de empresas</li><li>Alterações contratuais</li><li>Regularização e baixa</li></ul>
+        </article>
+        <article class="svc reveal">
+          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+          <h3>Consultoria &amp; Diretoria</h3>
+          <p>Visão estratégica para decisões mais seguras e lucrativas.</p>
+          <ul><li>Planejamento tributário</li><li>Análise de resultados</li><li>Apoio à gestão</li></ul>
+        </article>
+        <article class="svc reveal" style="background: var(--ground); color: var(--on-ground); border-color: transparent;">
+          <div class="svc-ico" style="background: color-mix(in srgb, var(--accent) 22%, transparent); color: var(--accent-soft);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2z"/></svg></div>
+          <h3 style="color: var(--on-ground);">Não sabe por onde começar?</h3>
+          <p style="color: var(--on-ground-muted);">Conte pra gente o momento do seu negócio. Montamos o plano contábil ideal para você.</p>
+          <a class="btn btn-light" href="https://wa.me/5561999197145" target="_blank" rel="noopener" style="margin-top:18px;">Quero uma conversa</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="band diff" id="diferenciais">
+    <div class="wrap">
+      <div class="sec-head reveal" style="margin-bottom:0;">
+        <span class="eyebrow">Por que a MD</span>
+        <h2 style="color: var(--on-ground);">Contabilidade que trabalha a favor do seu tempo</h2>
+      </div>
+      <div class="diff-grid">
+        <div class="diff-item reveal"><div class="num">01</div><h3>Atendimento humano</h3><p>Você fala com pessoas que conhecem a sua empresa, não com um número de protocolo. Suporte direto pelo WhatsApp.</p></div>
+        <div class="diff-item reveal"><div class="num">02</div><h3>Prazos que se cumprem</h3><p>Obrigações entregues antes do vencimento. Nada de multas por atraso ou correria de última hora.</p></div>
+        <div class="diff-item reveal"><div class="num">03</div><h3>Todos os setores</h3><p>Contábil, fiscal, pessoal e cadastro sob o mesmo teto — informação integrada e sem retrabalho.</p></div>
+        <div class="diff-item reveal"><div class="num">04</div><h3>Linguagem simples</h3><p>Traduzimos o contabilês para o português do dia a dia, para você decidir com confiança.</p></div>
+        <div class="diff-item reveal"><div class="num">05</div><h3>Foco no seu crescimento</h3><p>Mais do que cumprir tabela, ajudamos a enxergar oportunidades de economia e de expansão.</p></div>
+        <div class="diff-item reveal"><div class="num">06</div><h3>Experiência local</h3><p>Conhecimento do dia a dia das empresas de Brasília e região, com os órgãos do DF.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCEIROS / LINKS -->
+  <section class="band" id="links">
+    <div class="wrap reveal">
+      <span class="eyebrow">Links úteis</span>
+      <h2 style="font-size: clamp(1.7rem,3vw,2.4rem); margin-top:16px; max-width: 620px;">Acesso rápido aos principais órgãos</h2>
+      <p style="color: var(--muted); margin-top:14px; max-width: 620px;">Atalhos que a MD deixa à mão dos clientes para o dia a dia do negócio.</p>
+      <div class="partners-row">
+        <a class="chip" href="https://www.gov.br/receitafederal/pt-br" target="_blank" rel="noopener"><span class="dot"></span>Receita Federal</a>
+        <a class="chip" href="https://www.gov.br/" target="_blank" rel="noopener"><span class="dot"></span>gov.br</a>
+        <a class="chip" href="https://meu.inss.gov.br/central/" target="_blank" rel="noopener"><span class="dot"></span>Meu INSS</a>
+        <a class="chip" href="https://www.detran.df.gov.br/" target="_blank" rel="noopener"><span class="dot"></span>DETRAN-DF</a>
+        <a class="chip" href="https://www.pcdf.df.gov.br/" target="_blank" rel="noopener"><span class="dot"></span>PCDF</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="band" id="contato" style="padding-top:0;">
+    <div class="wrap">
+      <div class="contact-card reveal">
+        <div class="contact-left">
+          <span class="eyebrow">Fale conosco</span>
+          <h2>Vamos organizar<br>a sua empresa?</h2>
+          <p>Estamos prontos para atender. Escolha o canal que preferir — respondemos rápido.</p>
+          <div class="contact-lines">
+            <a class="cline" href="https://wa.me/5561999197145" target="_blank" rel="noopener">
+              <span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 0 16 8 8 0 0 1-4-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4z"/></svg></span>
+              <span><small>WhatsApp</small><b>(61) 99919-7145</b></span>
+            </a>
+            <a class="cline" href="tel:+556133696846">
+              <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+              <span><small>Telefone</small><b>(61) 3369-6846 · (61) 99255-7774</b></span>
+            </a>
+            <a class="cline" href="mailto:mdantascontabil@gmail.com">
+              <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <span><small>E-mail</small><b>mdantascontabil@gmail.com</b></span>
+            </a>
+          </div>
+          <div class="socials">
+            <a href="https://www.instagram.com/mdcontabil/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.facebook.com/share/19EFgBELbS/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.4-3H14V4.3c0-.8.3-1.3 1.5-1.3H17V.3C16.6.2 15.6 0 14.5 0 12 0 10.5 1.5 10.5 4v2H8v3h2.5v9H14z"/></svg></a>
+            <a href="http://www.youtube.com/@Manoeldantas100" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.2 5 12 5 12 5s-7.2 0-8.8.5A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.8 19 12 19 12 19s7.2 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <h3>Peça um orçamento</h3>
+          <p>Preencha os dados e retornamos com uma proposta sob medida para o seu negócio.</p>
+          <form id="orcamento" novalidate>
+            <div class="field"><label for="nome">Nome</label><input id="nome" name="nome" type="text" placeholder="Como podemos te chamar?" required></div>
+            <div class="field"><label for="fone">WhatsApp</label><input id="fone" name="fone" type="tel" placeholder="(61) 90000-0000" required></div>
+            <div class="field"><label for="msg">Como podemos ajudar?</label><textarea id="msg" name="msg" placeholder="Ex.: quero abrir uma empresa, trocar de contador, regularizar impostos..."></textarea></div>
+            <button class="btn btn-primary" type="submit">Enviar pelo WhatsApp</button>
+            <p class="form-note">Ao enviar, abrimos uma conversa no WhatsApp com a sua mensagem já preenchida.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="#top" style="color: var(--on-ground);">
+          <span class="monogram" aria-hidden="true">MD</span>
+          <span class="brand-name"><strong>MD Contábil</strong><span>&amp; Consultoria</span></span>
+        </a>
+        <p>Excelência em serviços contábeis para empresas de Brasília e região. Uma contabilidade que resolve — e coloca você no controle.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Navegação</h4>
+          <a href="#empresa">A empresa</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#diferenciais">Diferenciais</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contato</h4>
+          <a href="tel:+556133696846">(61) 3369-6846</a>
+          <a href="https://wa.me/5561999197145" target="_blank" rel="noopener">WhatsApp: (61) 99919-7145</a>
+          <a href="mailto:mdantascontabil@gmail.com">mdantascontabil@gmail.com</a>
+          <p>Brasília — DF</p>
+        </div>
+        <div class="foot-col">
+          <h4>Redes</h4>
+          <a href="https://www.instagram.com/mdcontabil/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/share/19EFgBELbS/" target="_blank" rel="noopener">Facebook</a>
+          <a href="http://www.youtube.com/@Manoeldantas100" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>© <span id="year">2026</span> MD Contábil &amp; Consultoria. Todos os direitos reservados.</span>
+      <span>Excelência em serviços contábeis</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5561999197145" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 0 16 8 8 0 0 1-4-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-2.4 4c-.2 0-.5 0-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5 0 1.6-.6 1.9-1.3.2-.6.2-1.2.1-1.3l-.6-.3s-1.6-.8-1.9-.9c-.2 0-.4-.1-.6.2l-.8 1c-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.7-1.5-2-.2-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5l.1-.4c0-.2 0-.4-.1-.5l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.3z"/></svg>
+</a>
+
+<script>
+  (function () {
+    // Theme toggle
+    var root = document.documentElement;
+    var btn = document.getElementById('themeToggle');
+    btn.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme');
+      if (!current) {
+        current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      root.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    var els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e, i) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    } else {
+      els.forEach(function (el) { el.classList.add('in'); });
+    }
+
+    // Quote form -> WhatsApp
+    var form = document.getElementById('orcamento');
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var nome = (document.getElementById('nome').value || '').trim();
+      var fone = (document.getElementById('fone').value || '').trim();
+      var msg = (document.getElementById('msg').value || '').trim();
+      var text = 'Olá, MD Contábil! Meu nome é ' + (nome || '(sem nome)') + '.';
+      if (fone) text += ' Meu WhatsApp: ' + fone + '.';
+      if (msg) text += ' ' + msg;
+      var url = 'https://wa.me/5561999197145?text=' + encodeURIComponent(text);
+      window.open(url, '_blank', 'noopener');
+    });
+  })();
+</script>
+</body>
+</html>
